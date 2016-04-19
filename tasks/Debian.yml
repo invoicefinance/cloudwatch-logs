@@ -1,10 +1,11 @@
 ---
 
-- name: "Download Install Script (Debian)."
-  get_url:
-    url: https://s3.amazonaws.com/aws-cloudwatch/downloads/latest/awslogs-agent-setup.py
+- name: "Insert Ugly Python Install Script"
+  file:
+    src: awslogs-agent-setup.py
     dest: /tmp/awslogs-agent-setup.py
-    mode: 550
+    state: file
+    mode: 0550
 
 - name: "Create /etc/awslogs (Debian)."
   file:
