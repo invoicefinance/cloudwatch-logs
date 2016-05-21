@@ -4,7 +4,7 @@
   file:
     path: /var/awslogs/state/
     state: directory
-    mode: 755
+    mode: 0755
 
 - name: "Configure AWS CloudWatch Logs Agent"
   template:
@@ -13,4 +13,5 @@
     owner: root
     group: root
     mode: 0644
-
+  register: cloudwatch_agent_config
+  notify: restart awslogs service

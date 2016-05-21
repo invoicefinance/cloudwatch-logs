@@ -4,11 +4,11 @@
   file:
     src: awslogs-agent-setup.py
     dest: /tmp/awslogs-agent-setup.py
-    state: file
     mode: 0550
+  register: cloudwatch_agent_script
 
 - name: "Create /etc/awslogs (Debian)."
   file:
     path: /etc/awslogs
     state: directory
-    mode: 755
+    mode: 0755

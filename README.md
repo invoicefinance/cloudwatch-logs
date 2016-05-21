@@ -23,14 +23,15 @@ List of logs with the following keys
 Dependencies
 ------------
 
-This role has no dependencies.
+This role has no dependencies, but the agent does need valid AWS IAM credentials.
+Refer to the AWS documentation for more information.
 
 Example Playbook
 ----------------
 
     - hosts: servers
       vars:
-        logs:
+        cloudwatch_logs:
           - file: /var/log/auth.log
             format: "%b %d %H:%M:%S"
             group_name: "auth"
@@ -38,7 +39,7 @@ Example Playbook
           - file: /home/ubuntu/.bash_history
             group_name: "bash_history"
       roles:
-         - { role: dharrisio.aws-cloudwatch-logs }
+         - { role: cloudwatch_logs }
 
 License
 -------
