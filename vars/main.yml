@@ -1,2 +1,2 @@
 ---
-# vars file for ansible-aws-cloudwatch-logs-agent
+# vars file for cloudwatch_logs

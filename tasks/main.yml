@@ -14,9 +14,3 @@
 - name: "Install Debian/Ubuntu Cloudwatch Log Agent"
   include: "DebianInstall.yml"
   when: ansible_os_family == "Debian"
-
-- name: "Restart awslogs service"
-  service:
-    name: awslogs
-    state: restarted
-

@@ -1,2 +1,7 @@
 ---
-# handlers file for ansible-aws-cloudwatch-logs-agent
+# handlers file for cloudwatch_logs
+
+- name: restart awslogs service
+  service:
+    name: awslogs
+    state: restarted
