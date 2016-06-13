@@ -1,7 +1,7 @@
 ---
 
 - name: "Insert Ugly Python Install Script"
-  file:
+  copy:
     src: awslogs-agent-setup.py
     dest: /tmp/awslogs-agent-setup.py
     mode: 0550
