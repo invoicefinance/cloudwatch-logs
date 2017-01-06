@@ -5,3 +5,4 @@
   service:
     name: awslogs
     state: restarted
+  become: yes
